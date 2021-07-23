@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Ranchers&display=swap');
+
+.todo {
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #6da441;
+    padding: 15px;
+    margin: 0 40%;
+    border-radius: 10px;
+}
+ul {
+    padding-left: 0;
+}
+
+.ui {
+    box-shadow: 0 3px 2px rgb(0, 0, 0);
+}
+.todo ul li {
+    list-style: none;
+    margin-bottom: 8px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+    text-align: left;
+    min-width: 350px;
+    box-shadow: 0 3px 2px rgb(0, 0, 0);
+}
+.todo ul li .delete {
+    margin-top: 3px;
+    float: right;
+    padding: 4px 10px 4px 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+.todo ul li .completed {
+    margin-top: 3px;
+    float: right;
+    padding: 4px 10px 4px 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: green;
+    margin-left: 10px;
+    color: white;
+}
+.todo .crossText {
+    text-decoration: line-through;
+    color: green;
+}
