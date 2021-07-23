@@ -1,4 +1,4 @@
-import React , { useState }from 'react';
+import React, { useState } from 'react';
 import { Button } from 'semantic-ui-react';
 import './ToDoApp.css'
 
@@ -6,8 +6,8 @@ const ToDoApp = () => {
 
     const [task, setTask] = useState('');
     const [tasklist, setTaskList] = useState([
-        {id: 1001, value: 'Buy Milk'},
-        {id: 1002, value: 'Buy Water'},
+        { id: 1001, value: 'Buy Milk' },
+        { id: 1002, value: 'Buy Water' },
     ]);
 
     const handleChange = (e) => {
@@ -21,12 +21,12 @@ const ToDoApp = () => {
                 value: task,
                 isComleted: false,
             };
-            setTaskList([...tasklist, taskDet]);
-        }
-        // setTaskList('');
+            setTaskList([...tasklist, taskDet])
+        } 
+        // setTask(''); по идее должно было очищать инпут , но что то пошло не так
     };
-
-    const deletetask = (e, id) => {
+    
+    const deleteTask = (e, id) => {
         e.preventDefault();
         setTaskList(tasklist.filter((t) => t.id !== id));
     };
@@ -66,7 +66,7 @@ const ToDoApp = () => {
                                 onClick={(e) => taskCompleted(e, t.id)}>
                                 <i>&#10004;</i>
                             </Button>
-                            <Button className="delete" color='red' onClick={(e) => deletetask(e, t.id)}>
+                            <Button className="delete" color='red' onClick={(e) => deleteTask(e, t.id)}>
                                 <i>&#10008;</i>
                             </Button>
                         </li>
